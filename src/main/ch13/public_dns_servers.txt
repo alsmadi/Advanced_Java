@@ -1,0 +1,12 @@
+ns1.granitecanyon.com
+
+ns2.granitecanyon.com
+
+ns1.quasar.net
+
+ns1.mailworx.net
+
+128.107.241.185 (Cisco)
+
+
+

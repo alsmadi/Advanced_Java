@@ -1,0 +1,8 @@
+  /* allow remote objects in the activation group to accept
+   * connections on any non-privileged port and allow the
+   * remote object to read the accounts.tab file
+   */
+grant {
+  permission java.net.SocketPermission "*:1024-", "accept,resolve";
+  permission java.io.FilePermission "accounts.tab", "read";
+};

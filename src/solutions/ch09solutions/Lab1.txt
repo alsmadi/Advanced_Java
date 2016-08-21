@@ -1,0 +1,5 @@
+Your policy file should include:
+
+permission java.io.FilePermission "C:\\advj2se\\ch09\\*", "write"; 
+
+Or something like it, depending upon your setup.

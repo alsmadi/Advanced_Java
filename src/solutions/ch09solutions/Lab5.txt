@@ -1,0 +1,17 @@
+Your rmiserver.policy file should look like this:
+
+grant codeBase "file:///C:/advj2se/ch09/server/*" {
+  permission java.net.SocketPermission "*:*", "accept, connect, listen, resolve";
+};
+
+Your .java.policy file should look like this:
+grant codeBase "file:///C:/advj2se/ch09/-" {
+  permission java.net.SocketPermission "*:*", "connect, resolve";
+  permission java.io.FilePermission "C:\\advj2se\\ch09\\server\\-", "read";
+  permission java.io.FilePermission "C:\\advj2se\\ch09\\*", "write";
+  permission java.lang.RuntimePermission "exitVM";
+};
+
+Run the TimeServer with the following command:
+java -Djava.rmi.server.codebase=file:///C:/advj2se/ch09/server/ -Djava.security.
+policy==rmiserver.policy TimeServer

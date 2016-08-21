@@ -1,0 +1,10 @@
+
+grant codeBase "file:///C:/advj2se/ch12/callback.jar" {
+  permission java.security.AllPermission;
+};
+
+grant codeBase "file:///C:/advj2se/ch12/sa.jar",
+      principal javax.security.auth.x500.X500Principal "CN=Rick Smith, OU=My-Company, O=MC, L=Pine, ST=CO, C=US" {
+  permission java.io.FilePermission "salaries.txt", "read";
+};
+

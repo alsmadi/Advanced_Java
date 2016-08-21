@@ -1,0 +1,6 @@
+/* allow the JVM for an activation group to specify a security policy */
+grant {
+  permission com.sun.rmi.rmid.ExecOptionPermission 
+    "-Djava.security.policy=*";
+};
+

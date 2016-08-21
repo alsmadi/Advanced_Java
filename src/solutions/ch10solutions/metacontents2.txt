@@ -1,0 +1,14 @@
+ Volume in drive C is ENTERPRISE
+ Volume Serial Number is 3926-10F1
+
+ Directory of C:\advj\ch16\meta-inf
+
+08/06/2002  12:25p      <DIR>          .
+08/06/2002  12:25p      <DIR>          ..
+08/06/2002  12:34p                 349 MANIFEST.MF
+08/06/2002  12:34p                 402 FIREFLY.SF
+08/06/2002  12:34p               1,140 FIREFLY.DSA
+08/06/2002  12:34p                 402 LADYBUG.SF
+08/06/2002  12:34p               1,114 LADYBUG.DSA
+               5 File(s)          3,407 bytes
+               2 Dir(s)     755,380,224 bytes free

@@ -1,0 +1,11 @@
+grant codeBase "file:///C:/advj2se/ch12/salaries.jar" {
+  permission javax.security.auth.AuthPermission "doAs";
+  permission javax.security.auth.AuthPermission "createLoginContext.Salaries";
+  permission java.io.FilePermission "salaries.txt", "read";
+};
+
+grant codeBase "file:///C:/advj2se/ch12/sa.jar",
+      principal com.sun.security.auth.NTUserPrincipal "student" {
+  permission java.io.FilePermission "salaries.txt", "read";
+};
+

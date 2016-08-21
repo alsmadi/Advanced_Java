@@ -1,0 +1,11 @@
+Your .java.policy file should now contain the added permission:
+
+  permission java.lang.RuntimePermission "exitVM";
+
+Command:
+
+  appletviewer WriteFile.html
+
+Clicking the applet's Close button should now exit the appletviewer without
+throwing an exception.
+

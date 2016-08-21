@@ -1,0 +1,79 @@
+// File: Employee.java.5
+
+import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Employee implements Serializable {
+  static final long serialVersionUID = -8853382621975997090L;
+  private int id;
+  private String firstName;
+  private String lastName;
+  private String title;
+  private String departmentCode;
+  private int supervisorId;
+  private Date hireDate;
+  private float salary;
+  private Date departmentStartDate;
+
+  public Employee(int i, String first, String last, String ti,
+                  String deptCode, int supId, Date hire, float sal) {
+    this(i, first, last, ti, deptCode, supId, hire, hire, sal);
+  }
+
+  public Employee(int i, String first, String last, String ti,
+                  String deptCode, int supId, Date hire,
+                  Date deptDate, float sal) {
+    id = i;
+    firstName = first;
+    lastName = last;
+    title = ti;
+    departmentCode = deptCode;
+    supervisorId = supId;
+    hireDate = hire;
+    departmentStartDate = deptDate;
+    salary = sal;
+  }
+
+  public boolean equals(Object o) {
+    if (o instanceof Employee) {
+      Employee eTest = (Employee) o;
+      return id == eTest.id &&
+             lastName.equals(eTest.lastName) &&
+             firstName.equals(eTest.firstName) &&
+             title.equals(eTest.title) &&
+             hireDate.equals(eTest.hireDate);
+    }
+    else
+      return false;
+  }
+  public String toString() {
+    SimpleDateFormat df = new SimpleDateFormat("MMM d, yyyy");
+    StringBuilder result = new StringBuilder();
+    result.append(title);
+    result.append(" ").append(firstName);
+    result.append(" ").append(lastName);
+    result.append(" hired ").append(df.format(hireDate));
+    result.append(" department start date ");
+    result.append(df.format(departmentStartDate));
+    return result.toString();
+  }
+  public String getName() {
+    return firstName + " " + lastName;
+  }
+  public String getTitle() {
+    return title;
+  }
+  public Date getHireDate() {
+    return hireDate;
+  }
+  public int getId() {
+    return id;
+  }
+  public int getSupervisorId() {
+    return supervisorId;
+  }
+  public Date getDepartmentStartDate() {
+    return departmentStartDate;
+  }
+}

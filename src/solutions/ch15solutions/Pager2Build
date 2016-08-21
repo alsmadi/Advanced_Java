@@ -1,0 +1,7 @@
+echo "javac Pager2.java"
+javac Pager2.java
+echo "javah Pager2"
+javah Pager2
+echo "cc Pager2.c"
+cc -I/root/jdk1.5.0_04/include -I/root/jdk1.5.0_04/include/linux -shared -o Pager2.so Pager2.c
+ls

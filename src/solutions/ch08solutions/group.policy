@@ -1,0 +1,6 @@
+/* allow remote objects in the activation group to accept
+ * connetcionts on any non-privileged port
+ */
+grant {
+  permission java.net.SocketPermission "*:1024-", "accept,resolve";
+};

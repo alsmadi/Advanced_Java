@@ -1,0 +1,8 @@
+/* allow the BankClient to connect to non-privileged ports
+ * so that it can connect to the remote object, rmiregistry,
+ * and rmid.
+ */
+grant {
+  permission java.net.SocketPermission "*:1024-", "connect,resolve";
+};
+

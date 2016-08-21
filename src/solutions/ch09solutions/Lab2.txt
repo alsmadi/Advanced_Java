@@ -1,0 +1,6 @@
+Command:
+    appletviewer WriteFile.html
+
+Clicking the applet's Close button should throw an AccessControlException,
+because the applet lacks the java.lang.RuntimePermission for the target exitVM.  
+The appletviewer checks for this permission when System.exit() is called.

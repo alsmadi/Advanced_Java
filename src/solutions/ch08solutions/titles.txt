@@ -1,0 +1,6 @@
+0131483986, Java How to Program
+1586639161, Java
+0201310058, Effective Java Programming Language Guide
+0321305027, The Java Developer's Guide to Eclipse
+0596009208, Head First Java
+0596007736, Java in a Nutshell

@@ -1,0 +1,4 @@
+Mary Jane|CEO|250000
+John Breckenridge|CTO|175000
+Debbie Loveland|Software Architect|85000
+Tom Keystone|Software Engineer|65000

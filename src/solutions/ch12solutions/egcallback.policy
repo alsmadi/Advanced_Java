@@ -1,0 +1,9 @@
+grant codeBase "file:///C:/advj2se/ch12/Solutions/egcallback.jar" {
+  permission java.security.AllPermission;
+};
+
+grant codeBase "file:///C:/advj2se/ch12/Solutions/sa.jar",
+      principal EgPrincipal "Mary" {
+  permission java.io.FilePermission "salaries.txt", "read";
+};
+

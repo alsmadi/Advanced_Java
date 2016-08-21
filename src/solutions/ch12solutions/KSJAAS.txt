@@ -1,0 +1,11 @@
+You need to change the login config file to specify 
+com.sun.security.auth.module.KeyStoreLoginModule.
+
+You also need to create a policy file for the application.  Because we're only
+looking at the Subject, and not calling doAs(), you don't need a separate policy 
+entry specifying the principal.  Because of that, the all.policy file in the
+chapter directory will do the job.
+
+Normally, that's all you would have to do.  But since NTJAAS doesn't use a 
+callback handler, you need to edit the source code to pass a LoginHandler to the 
+LoginContext constructor.

@@ -1,0 +1,20 @@
+When you run ShowTimeClient, TimeServer has an exception:
+Exception in thread "RMI TCP Connection(2)-10.0.0.1" java.security.AccessControl
+Exception: access denied (java.net.SocketPermission 10.0.0.1:1121 accept,resolve
+)
+
+The exception tells you TimeServer needs a SocketPermission with accept and 
+resolve actions.
+
+After adding the accept permission, your .java.policy file should look something like
+this:
+
+grant codeBase "file:///C:/advj2se/ch09/-" {
+  permission java.net.SocketPermission "*:*", "connect, resolve, accept";
+  permission java.io.FilePermission "C:\\advj2se\\ch09\\server\\-", "read";
+  permission java.io.FilePermission "C:\\advj2se\\ch09\\*", "write";
+  permission java.lang.RuntimePermission "exitVM";
+};
+
+
+Or something like it, depending upon your setup.

@@ -1,0 +1,8 @@
+ldap://ldap.yo-linux.com/o=stooges
+
+ldap://ldap.uas.alaska.edu
+
+ldap://ldap.nyu.edu
+
+
+
