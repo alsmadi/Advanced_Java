@@ -16,7 +16,7 @@ public class CreatePerson {
       Person2 person = (Person2) constructor.newInstance(parms);
       System.out.println(person);
 
-      parms = new Object[] {"John Doe", "CIO", "xx/02/1968", 2};
+      parms = new Object[] {"John Doe", "CIO", "01/02/1968", 2};
       person = (Person2) constructor.newInstance(parms);
       System.out.println(person);
     }

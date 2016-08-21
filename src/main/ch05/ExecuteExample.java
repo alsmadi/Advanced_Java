@@ -8,12 +8,14 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.Statement;
-
+// make sure to start db server (startNetworkServer.bat)
 public class ExecuteExample  {
   public static void main(String args[]) {
     try {
       Class.forName("org.apache.derby.jdbc.ClientDriver");
-      String url = "jdbc:derby://localhost:1527/j2se";
+    //  String url = "jdbc:derby://localhost:1527/j2se";
+      String url = "jdbc:derby://localhost:1527/j2se;create=true;user=APP;pass=APP";
+    //  String url = "jdbc:derby://localhost/j2se";
       Connection conn = DriverManager.getConnection(url);
 
       String sqlstring = readInSQLStatement();
